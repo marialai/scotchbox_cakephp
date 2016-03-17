@@ -5,7 +5,6 @@ Vagrant.configure("2") do |config|
 
     config.vm.provision "shell", inline: "composer self-update"
     config.vm.provision "shell", inline: "composer create-project --prefer-dist cakephp/app /var/www/public"
-    config.vm.provision "shell", inline: "mv /var/www/public/config/app.php /var/www/public/config/app.php.original"
     config.vm.provision "file", source: "app.php", destination: "/var/www/public/config/app.php"
     config.vm.box = "scotch/box"
     config.vm.network "private_network", ip: "192.168.33.10"
