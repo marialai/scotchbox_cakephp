@@ -1,0 +1,1 @@
+# scotchbox_cakephp
