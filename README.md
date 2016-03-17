@@ -1,4 +1,4 @@
 # Scotch/Box with CakePHP
 
-Run `setup_box.sh` to install Scotch/Box with an empty CakePHP project and configure it with Scotch/Box default MySQL server by copying a modified `app.php` to `config`.
+Run `vagrant up` to install a Scotch/Box with CakePHP, including a modified app.php to reflect default Scotch/Box MySQL settings.
 
