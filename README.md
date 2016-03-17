@@ -1,10 +1,7 @@
 # scotch/box with CakePHP
 
-Run `vagrant up` to install a Scotch/Box with a fresh CakePHP project in `/home/vagrant/cakephp-project`.
-
-A soft link to `/var/www/public` is created which points to this CakePHP project.
-
-A modified `app.php` is copied to `config/app.php` to reflect default Scotch/Box MySQL settings.
+Run `vagrant up` to install a Scotch/Box with CakePHP.
+A folder `public` is created with a new CakePHP project, including a modified `config/app.php` to reflect default Scotch/Box MySQL settings.
 
 Also fixes scotch/box UTF-8 bug.
 

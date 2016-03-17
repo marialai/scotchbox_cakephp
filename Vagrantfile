@@ -11,12 +11,10 @@ Vagrant.configure("2") do |config|
     config.vm.provision "shell", inline: "composer self-update"
 
     # install cakephp empty project
-    config.vm.provision "shell", inline: "composer create-project --prefer-dist cakephp/app /home/vagrant/cakephp-project"
+    config.vm.provision "shell", inline: "composer create-project --prefer-dist cakephp/app /var/www/public"
     
     # copy app.php with scotch/box MySQL settings to config
-    config.vm.provision "file", source: "app.php", destination: "/home/vagrant/cakephp-project/config/app.php"
-
-    config.vm.provision "shell", inline: "sudo ln -s /home/vagrant/cakephp-project /var/www/public"
+    config.vm.provision "file", source: "app.php", destination: "/var/www/public/config/app.php"
 
     # default config
     config.vm.box = "scotch/box"
