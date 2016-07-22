@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
     config.vm.provision "file", source: "app.php", destination: "/var/www/public/config/app.php"
 
     # copy adminer.php to webroot
-    config.vm.privision "file", source: "adminer.php", destination: "/var/www/public/app/webroot/adminer.php"
+    config.vm.provision "file", source: "adminer.php", destination: "/var/www/public/app/webroot/adminer.php"
 
     # default config
     config.vm.box = "scotch/box"
